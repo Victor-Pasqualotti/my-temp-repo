@@ -1,0 +1,30 @@
+{
+    "Table": "tbl_victor_pasqua_dataset_bapt_simples_etl",
+    "Database": "database",
+    "WriteMode":"overwrite",
+    "Partition":"anomesdia",
+    "CopySourceSchema":true,
+    "Properties":{
+        "Domain": "victor",
+        "SubDomain": "pasqualotti",
+        "Dataset": "baptista",
+        "LakeZone":"spec"
+    },
+    "Sources":[
+        {
+            "database":"database",
+            "table_name":"table_name",
+            "table_type":"parquet",
+            "push_down_predicate":{
+                "ByValue":"anomesdia = xxxx",
+                "ByExpression":"expression",
+                "ByAthenaQueryLimit":1
+            },
+            "additional_options": {}
+        }
+    ],
+    "QualityRules":[
+
+    ]
+
+}
