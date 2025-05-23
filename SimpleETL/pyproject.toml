@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SimpleETL"
+version = "0.1.0"
+description = "Minha nova biblioteca Python"
+authors = [
+  { name = "Seu Nome", email = "seu@email.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "boto3==1.38.19"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
